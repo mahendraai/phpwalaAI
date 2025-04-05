@@ -1,64 +1,72 @@
-# phpwalaAI 
-# Mahendra Ribadiya
-Core Features
-AI Code Autocomplete & Suggestions
+🛠️ Product Vision
+“An AI-powered Laravel playground with built-in Supabase integration.”
 
-Laravel-specific scaffolding (e.g., models, controllers, migrations)
+Users can:
 
-Blade templating support
+Generate full Laravel apps with AI prompts (like “Build me a blog with comments and likes”)
 
-Route, request, and service generation
+Edit Laravel code in-browser
 
-In-Browser IDE
+Deploy instantly to a cloud dev server
 
-Web-based editor (like Monaco or CodeMirror)
+Connect, query, and manage Supabase DB in real-time
 
-Syntax highlighting for PHP, Blade, and Laravel-specific code
+Export to GitHub or deploy to their own server
 
-Terminal & log viewer
+🧩 Core Features
+1. AI Laravel Generator (v0-style)
+Prompt-to-code generator using OpenAI + Laravel template engine
 
-Live Preview / App Runner
+Includes routes, controllers, models, migrations, factories
 
-Spin up a Laravel dev server in a containerized environment (Docker)
+Blade templates with Tailwind (or Livewire/Inertia)
 
-Real-time preview of API responses or Blade views
+2. In-browser Laravel IDE
+Monaco editor (VSCode in the browser)
 
-AI-Powered Assistant
+Real-time preview for routes/views
 
-Chat UI (like Copilot Chat) for Laravel coding help
+Terminal logs, migrations, seeders
 
-Generate code snippets, fix bugs, explain code, write tests
+3. Supabase Integration
+OAuth with Supabase
 
-Project Templates & Boilerplates
+Visual schema designer or SQL editor
 
-Start new Laravel projects with predefined stacks (e.g., Laravel + Livewire, Laravel + Inertia, Laravel API + Vue)
+Generate Laravel DB models & migrations from Supabase schema
 
-Database Modeling & Seed Generation
+Supabase client built into Laravel (env auto-configured)
 
-Visual ERD and Laravel migration generation
+4. One-click Dev Environment
+Containerized Laravel instance per user (via Dagger, Docker, or Railway-style infra)
 
-AI-generated seed data and factory files
+Auto-provisioning for new apps
 
-GitHub Integration
+Supabase URL & keys auto-wired into .env
 
-Clone, edit, commit, push
+5. Export / Deploy
+GitHub export
 
-PR review assistant using AI
+Download as zip
 
-⚙️ Stack Suggestion
-Frontend: Next.js + Tailwind CSS (or Vue if you want Laravel synergy)
+Optional deploy to Vercel or Render for frontend/API
 
-Backend: Node.js (for orchestrating AI + container ops), Laravel (optional for backend API)
+🏗️ Tech Stack
+Layer	Tech
+Frontend	Next.js + Tailwind + shadcn/ui
+Backend	Node.js or Laravel (for orchestrating AI, Docker, Supabase, etc)
+AI	OpenAI GPT-4 (fine-tuned on Laravel apps)
+Database	Supabase (PostgreSQL)
+Container	Docker + Railway / Fly.io / Dagger
+Auth	Supabase Auth (email, GitHub, Google)
+Editor	Monaco Editor
+⚡ User Flow (like v0.dev + Laravel + Supabase)
+Prompt: “Create a Laravel job board with company profiles”
 
-AI Integration: OpenAI API (with custom fine-tuning for Laravel best practices)
+AI Output: Laravel app structure, model classes, routes, controllers, Blade templates
 
-Container Runtime: Docker + Firecracker or Dagger for isolated Laravel environments
+Supabase DB: Auto-create tables and insert DB URL into .env
 
-Infra: Vercel (frontend), Supabase or Firebase (auth), AWS/GCP (backend container infra)
+Code & Preview: Modify logic, preview locally via sandbox
 
-💡 Monetization Ideas
-Free tier with limited project hours
-
-Pro plan for unlimited projects, advanced AI tools, private repos
-
-Team plan with collaboration features, team AI coach
+Export or Deploy: One-click deploy or GitHub export
